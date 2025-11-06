@@ -14,7 +14,7 @@ namespace MiniGameCollection.Games2025.Team10
         [field: SerializeField] public float MinMaxY { get; private set; } = 4f; // constraints along Y axis movement
         [field: SerializeField] public bool CanShootFrisbee { get; private set; } = false;
 
-   
+
         // X movement limits
         [field: SerializeField] public float MinX { get; private set; } = -8f; // Left movement limiter for Player 1
         [field: SerializeField] public float MaxX { get; private set; } = 8f; // Right limited for Player 2
@@ -23,6 +23,9 @@ namespace MiniGameCollection.Games2025.Team10
         // Shooting cooldown timer
         [field: SerializeField] public float FireCooldown { get; private set; } = 1f; // Temporary firing cooldown for testing (will be changed according to bounce back of frisbee feature)
         private float fireTimer = 0f; // Tracks time since last frisbee was thrown 
+
+        //
+        private Vector2 moveInput = Vector2.zero;
 
         // Identifys which player own the frisbee
         private FrisbeeOwner Owner => PlayerID switch
@@ -39,25 +42,7 @@ namespace MiniGameCollection.Games2025.Team10
             float axisY = ArcadeInput.Players[(int)PlayerID].AxisY;
             float axisX = ArcadeInput.Players[(int)PlayerID].AxisX;
 
-            // Combines the X and Y input to move the player  
-            Vector3 movement = new Vector3(axisX, axisY, 0f) * Time.deltaTime * ShipSpeed;
-            Vector3 newPosition = transform.position + movement;
-
-            // Keep players inside top and bottom of playing screen
-            newPosition.y = Mathf.Clamp(newPosition.y, -MinMaxY, MinMaxY);
-
-            // Keeps players on their sides
-            if (PlayerID == PlayerID.Player1)
-            {
-                newPosition.x = Mathf.Clamp(newPosition.x, MinX, -MiddleClamp); // Red stays on left side of screen
-            }
-            if (PlayerID == PlayerID.Player2)
-            {
-                newPosition.x = Mathf.Clamp(newPosition.x, MiddleClamp, MaxX); // Blue stays on right side of screen
-            }
-
-            // Actually moves the players Rigidbody2D
-            Rigidbody2D.MovePosition(newPosition);
+            moveInput = new Vector2(axisX, axisY);
 
             // Shooting Frisbee logic
             if (!CanShootFrisbee)
@@ -67,14 +52,41 @@ namespace MiniGameCollection.Games2025.Team10
 
             // Count down cooldown timer
             fireTimer -= Time.deltaTime;
-            
+
             // If the cooldown is done and shoot button is pressed -> shoot the frisbee
             if (fireTimer < 0f && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
             {
                 ShootFrisbee();
                 fireTimer = FireCooldown; // Reset the cooldown timer
             }
-                
+
+        }
+
+        // Old movement was in Update but it felt really jittery (I moved it to FixedUpdate and it seems less laggy - Ciaran)
+        private void FixedUpdate()
+        {
+            Vector2 movement = moveInput * ShipSpeed * Time.deltaTime;
+
+            // Start from Rigidbody position for the physics
+            Vector2 newPosition = Rigidbody2D.position + movement;
+
+            // Clamp the bottom and top of the screen
+            newPosition.y = Mathf.Clamp(newPosition.y, -MinMaxY, MinMaxY);
+
+            // Keeps players on their sides of the map
+            if (PlayerID == PlayerID.Player1)
+            {
+                // Red stays on left side of screen
+                newPosition.x = Mathf.Clamp(newPosition.x, MinX, -MiddleClamp);
+            }
+            else if (PlayerID == PlayerID.Player2)
+            {
+                // Blue stays on right side of screen
+                newPosition.x = Mathf.Clamp(newPosition.x, MiddleClamp, MaxX);
+            }
+
+            // Actually moves the players Rigidbody2D
+            Rigidbody2D.MovePosition(newPosition);
         }
 
         void ShootFrisbee()
@@ -96,7 +108,7 @@ namespace MiniGameCollection.Games2025.Team10
         {
             // Automatically fills in missing Rigidbody refernece in the Unity Inspector
             if (Rigidbody2D == null)
-            { 
+            {
                 Rigidbody2D = GetComponent<Rigidbody2D>();
             }
         }

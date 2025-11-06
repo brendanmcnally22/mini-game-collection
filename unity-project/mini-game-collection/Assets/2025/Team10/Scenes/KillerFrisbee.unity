@@ -3411,7 +3411,7 @@ MonoBehaviour:
   <Rigidbody2D>k__BackingField: {fileID: 998438814}
   <ScoreKeeper>k__BackingField: {fileID: 0}
   <FrisbeeSpeed>k__BackingField: 8
-  <ShipSpeed>k__BackingField: 30
+  <ShipSpeed>k__BackingField: 5
   <MinMaxY>k__BackingField: 4
   <CanShootFrisbee>k__BackingField: 0
   <MinX>k__BackingField: -8
@@ -4408,7 +4408,7 @@ MonoBehaviour:
   <Rigidbody2D>k__BackingField: {fileID: 1289826255}
   <ScoreKeeper>k__BackingField: {fileID: 0}
   <FrisbeeSpeed>k__BackingField: 8
-  <ShipSpeed>k__BackingField: 30
+  <ShipSpeed>k__BackingField: 5
   <MinMaxY>k__BackingField: 4
   <CanShootFrisbee>k__BackingField: 0
   <MinX>k__BackingField: -8
