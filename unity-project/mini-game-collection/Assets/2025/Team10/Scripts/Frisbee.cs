@@ -65,10 +65,35 @@ namespace MiniGameCollection.Games2025.Team10
             var player = collider2d.GetComponent<PlayerController>();
             if (player != null)
             {
-                // Subtract points from whoever was hit (even if you hit urself)
-                ScoreKeeper.AddScore(player.PlayerID, PointPenalty);
-                DestroyFrisbee();
-                return;
+                // If the frisbee hits the player that threw it
+                if (player.PlayerID == OwnerToPlayerID(Owner))
+                {
+                    // If it's returning, that means the player caught it
+                    if (isReturning)
+                    {
+                        // Player catches their own frisbee successfully
+                        player.OnCatchFrisbee(); // No score change for catching your own frisbee :D 
+                        
+                        DestroyFrisbee();// Delete the frisbee
+                        return;
+                    }
+                    else
+                    {
+                        // If they somehow hit themselves before the bounce, subtract points
+                     
+                        ScoreKeeper.AddScore(player.PlayerID, PointPenalty);
+                        DestroyFrisbee();
+                        return;
+                    }
+                }
+                else
+                {
+                    // If the frisbee hits the other player
+                    // Subtract points from whoever was hit (even if you hit urself)
+                    ScoreKeeper.AddScore(player.PlayerID, PointPenalty);
+                    DestroyFrisbee();
+                    return;
+                }
             }
 
             // Check if it hit a wall
@@ -80,10 +105,11 @@ namespace MiniGameCollection.Games2025.Team10
             {
                 return; // hit something else, ignore for now
             }
-                
+
             // If it is a wall then figure out which wall was hit
             HandleWallHit(hitLeftWall);
         }
+
 
         // Function for what to do if the frisbee hits a wall
         private void HandleWallHit(bool isLeftWall)

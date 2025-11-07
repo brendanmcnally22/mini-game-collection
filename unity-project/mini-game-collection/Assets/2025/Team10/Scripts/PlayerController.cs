@@ -103,7 +103,21 @@ namespace MiniGameCollection.Games2025.Team10
             // Inform the script who threw it, and how fast to go 
             frisbee.Shoot(Owner, transform.up, FrisbeeSpeed, ScoreKeeper, MiniGameManager);
         }
+        public void OnCatchFrisbee()
+        {
+            // Player successfully caught their returning frisbee
+            // You get to shoot that thing again twin
+            CanShootFrisbee = true;
 
+            
+        }
+        /// <summary>
+        /// Hey Ciaran
+        /// I was able to add the catch mechanic and the players can throw the frisbee again after catching it.
+        ///  Catching only works after bounce (isReturning = true)
+        //   Players must have PlayerController + correct PlayerID
+        //   Wall tags: "LeftWall" and "RightWall"
+        /// </summary>
         private void OnValidate()
         {
             // Automatically fills in missing Rigidbody refernece in the Unity Inspector
