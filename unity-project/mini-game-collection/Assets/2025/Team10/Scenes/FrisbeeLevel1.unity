@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &296155845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4415,10 +4415,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.050000004
-    y: 0
-    width: 0.90000004
-    height: 1
+    x: 0
+    y: 0.037037037
+    width: 0.33333334
+    height: 0.37037036
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -5194,7 +5194,7 @@ GameObject:
   - component: {fileID: 732448638}
   m_Layer: 0
   m_Name: buttonYellow
-  m_TagString: LeftWall
+  m_TagString: RightWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5279,7 +5279,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: ecdedeaed5dea154898b72b66d31f7ec, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &745199027
