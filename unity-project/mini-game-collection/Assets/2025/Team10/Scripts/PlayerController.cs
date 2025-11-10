@@ -141,16 +141,17 @@ namespace MiniGameCollection.Games2025.Team10
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {//when the player enters a certain tag and and presses the input it goes to the next level.
-            if (collision.gameObject.name == "Space" && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
+            if (collision.gameObject.name == "Space")
             {
                 SceneManager.LoadScene("FrisbeeLevel2");
 
             }
-            if (collision.gameObject.name == "Hanger" && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
+            if (collision.gameObject.name == "Hanger")
             {
                 SceneManager.LoadScene("FrisbeeLevel1");
+                Debug.Log("test this is working");
 
-                if (collision.gameObject.name == "Station" && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
+                if (collision.gameObject.name == "Station")
                 {
                     SceneManager.LoadScene("FrisbeeLevel3");
 
