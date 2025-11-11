@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 555912488037263890}
   - component: {fileID: 3874770600176974453}
   m_Layer: 0
-  m_Name: WarningGlow
+  m_Name: WarningGlow2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 3152291432725025299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.67, z: 0}
-  m_LocalScale: {x: 2, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: -0.67, z: 0}
+  m_LocalScale: {x: 2.4877262, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8842889926564539295}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ced5bcb556a66a45836ab10463c9a81, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b79d7fa7eaded84bbf49b58d1e698f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3118814828681123356}
   - component: {fileID: 2551768781175185685}
   - component: {fileID: 8652095025325186064}
-  - component: {fileID: 8893504578082673878}
+  - component: {fileID: 7632410234240855838}
   m_Layer: 0
   m_Name: frisbeeBlue
   m_TagString: Untagged
@@ -162,7 +162,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 460026e7ebccc4b4c92f53bd36fd2a8e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0db5109ca3e06c343b4e60ab12ead248, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   <ScoreKeeper>k__BackingField: {fileID: 0}
   <CanBounceBack>k__BackingField: 1
   <ReturnSpeedMultiplier>k__BackingField: 0.8
---- !u!114 &8893504578082673878
+--- !u!114 &7632410234240855838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4564444824610745045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b07da40dc40c7b14da59f3be1d4fd85a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ee5fef459274df40b38b64896b814e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   warningGlow: {fileID: 3152291432725025299}
