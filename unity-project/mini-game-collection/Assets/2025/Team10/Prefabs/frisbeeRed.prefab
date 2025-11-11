@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6188533062245865750}
   - component: {fileID: -6717157183279613618}
   - component: {fileID: -3984920507373577898}
-  - component: {fileID: 8184842307064817936}
+  - component: {fileID: 2058595389148588070}
   m_Layer: 0
   m_Name: frisbeeRed
   m_TagString: Untagged
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c3a5f8966eec23748ba3df57ec7557b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 460026e7ebccc4b4c92f53bd36fd2a8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   <ScoreKeeper>k__BackingField: {fileID: 0}
   <CanBounceBack>k__BackingField: 1
   <ReturnSpeedMultiplier>k__BackingField: 0.8
---- !u!114 &8184842307064817936
+--- !u!114 &2058595389148588070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -257,7 +257,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b79d7fa7eaded84bbf49b58d1e698f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d26434cffec7a744d9569775cb2398b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
