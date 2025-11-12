@@ -112,13 +112,7 @@ namespace MiniGameCollection.Games2025.Team10
 
             
         }
-        /// <summary>
-        /// Hey Ciaran
-        /// I was able to add the catch mechanic and the players can throw the frisbee again after catching it.
-        ///  Catching only works after bounce (isReturning = true)
-        //   Players must have PlayerController + correct PlayerID
-        //   Wall tags: "LeftWall" and "RightWall"
-        /// </summary>
+        
         private void OnValidate()
         {
             // Automatically fills in missing Rigidbody refernece in the Unity Inspector
