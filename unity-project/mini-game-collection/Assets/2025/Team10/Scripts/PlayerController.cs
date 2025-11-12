@@ -130,7 +130,7 @@ namespace MiniGameCollection.Games2025.Team10
 
         protected override void OnGameStart()
         {
-            // Allows the player to shoot when the game starts 
+            // Allows the player to shoot when the game starts 1
             CanShootFrisbee = true;
         }
 
