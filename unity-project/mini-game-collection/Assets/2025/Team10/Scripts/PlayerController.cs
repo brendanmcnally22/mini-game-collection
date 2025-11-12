@@ -143,17 +143,17 @@ namespace MiniGameCollection.Games2025.Team10
         {//when the player enters a certain tag and and presses the input it goes to the next level.
             if (collision.gameObject.name == "Space")
             {
-                SceneManager.LoadScene("FrisbeeLevel2");
+                SceneManager.LoadScene("Space");
 
             }
             if (collision.gameObject.name == "Hanger")
             {
-                SceneManager.LoadScene("FrisbeeLevel1");
+                SceneManager.LoadScene("Hanger");
                 Debug.Log("test this is working");
 
                 if (collision.gameObject.name == "Station")
                 {
-                    SceneManager.LoadScene("FrisbeeLevel3");
+                    SceneManager.LoadScene("Station");
 
                 }
             }
