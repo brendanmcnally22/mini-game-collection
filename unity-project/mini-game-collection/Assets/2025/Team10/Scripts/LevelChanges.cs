@@ -4,18 +4,21 @@ using MiniGameCollection;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelChanges : MonoBehaviour
+namespace MiniGameCollection.Games2025.Team10
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LevelChanges : MonoBehaviour
     {
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    }
+}

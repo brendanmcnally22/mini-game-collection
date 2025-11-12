@@ -1,36 +1,39 @@
 using UnityEngine;
 using System.Collections;
 
-public class FrisbeeInventoryP2 : MonoBehaviour
+namespace MiniGameCollection.Games2025.Team10
 {
-    public GameObject diskChild;
-    public float hideDuration = 2f;
-
-    private bool isHidden = false;
-    private bool isOnCooldown = false;
-
-    void Update()
+    public class FrisbeeInventoryP2 : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Comma) && !isOnCooldown)
+        public GameObject diskChild;
+        public float hideDuration = 2f;
+
+        private bool isHidden = false;
+        private bool isOnCooldown = false;
+
+        void Update()
         {
-            StartCoroutine(HideDiskTemporarily());
+            if (Input.GetKeyDown(KeyCode.Comma) && !isOnCooldown)
+            {
+                StartCoroutine(HideDiskTemporarily());
+            }
         }
-    }
 
-    private IEnumerator HideDiskTemporarily()
-    {
-        isOnCooldown = true;
-        isHidden = true;
+        private IEnumerator HideDiskTemporarily()
+        {
+            isOnCooldown = true;
+            isHidden = true;
 
-        if (diskChild != null)
-            diskChild.SetActive(false);
+            if (diskChild != null)
+                diskChild.SetActive(false);
 
-        yield return new WaitForSeconds(hideDuration);
+            yield return new WaitForSeconds(hideDuration);
 
-        if (diskChild != null)
-            diskChild.SetActive(true);
+            if (diskChild != null)
+                diskChild.SetActive(true);
 
-        isHidden = false;
-        isOnCooldown = false;
+            isHidden = false;
+            isOnCooldown = false;
+        }
     }
 }

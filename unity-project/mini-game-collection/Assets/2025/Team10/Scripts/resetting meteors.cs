@@ -2,25 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class resettingmeteors : MonoBehaviour
+namespace MiniGameCollection.Games2025.Team10
 {
-    public Vector2 resetPosition = new Vector2(0f, 8f);
-    public float fallSpeed = 2f;
-
-    void Update()
+    public class resettingmeteors : MonoBehaviour
     {
-        transform.position += Vector3.down * fallSpeed * Time.deltaTime;
-    }
+        public Vector2 resetPosition = new Vector2(0f, 8f);
+        public float fallSpeed = 2f;
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (collision.CompareTag("meteorReset"))
+        void Update()
         {
-            Vector3 pos = transform.position;
-            pos.y = resetPosition.y;
-            transform.position = pos;
+            transform.position += Vector3.down * fallSpeed * Time.deltaTime;
+        }
+
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+
+            if (collision.CompareTag("meteorReset"))
+            {
+                Vector3 pos = transform.position;
+                pos.y = resetPosition.y;
+                transform.position = pos;
+            }
         }
     }
 }
