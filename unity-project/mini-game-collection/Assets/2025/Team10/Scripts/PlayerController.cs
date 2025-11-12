@@ -22,7 +22,7 @@ namespace MiniGameCollection.Games2025.Team10
         [field: SerializeField] public float MiddleClamp { get; private set; } = 1.5f; // Middle zone where players cant go (no middle camping)
 
         // Shooting cooldown timer
-        [field: SerializeField] public float FireCooldown { get; private set; } = 1f; // Temporary firing cooldown for testing (will be changed according to bounce back of frisbee feature)
+        [field: SerializeField] public float FireCooldown { get; private set; } = 10f; // Temporary firing cooldown for testing (will be changed according to bounce back of frisbee feature)
         private float fireTimer = 0f; // Tracks time since last frisbee was thrown 
 
         //
@@ -55,10 +55,10 @@ namespace MiniGameCollection.Games2025.Team10
             fireTimer -= Time.deltaTime;
 
             // If the cooldown is done and shoot button is pressed -> shoot the frisbee
-            if (fireTimer < 0f && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
+           if (CanShootFrisbee && fireTimer <= 0f && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
             {
                 ShootFrisbee();
-                fireTimer = FireCooldown; // Reset the cooldown timer
+                fireTimer = FireCooldown; // Reset cooldown timer
             }
 
         }
@@ -130,7 +130,7 @@ namespace MiniGameCollection.Games2025.Team10
 
         protected override void OnGameStart()
         {
-            // Allows the player to shoot when the game starts 
+            // Allows the player to shoot when the game starts 1
             CanShootFrisbee = true;
         }
 
@@ -143,17 +143,17 @@ namespace MiniGameCollection.Games2025.Team10
         {//when the player enters a certain tag and and presses the input it goes to the next level.
             if (collision.gameObject.name == "Space")
             {
-                SceneManager.LoadScene("FrisbeeLevel2");
+                SceneManager.LoadScene("Space");
 
             }
             if (collision.gameObject.name == "Hanger")
             {
-                SceneManager.LoadScene("FrisbeeLevel1");
+                SceneManager.LoadScene("Hanger");
                 Debug.Log("test this is working");
 
                 if (collision.gameObject.name == "Station")
                 {
-                    SceneManager.LoadScene("FrisbeeLevel3");
+                    SceneManager.LoadScene("Station");
 
                 }
             }
