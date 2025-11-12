@@ -6,9 +6,7 @@ TagManager:
   tags:
   - LeftWall
   - RightWall
-  - Space
-  - Station
-  - Hanger
+  - meteorReset
   layers:
   - Default
   - TransparentFX
