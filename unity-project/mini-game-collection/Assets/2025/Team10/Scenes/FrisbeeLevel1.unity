@@ -4135,9 +4135,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.17257683
     y: 0
-    width: 1
+    width: 0.6543735
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -6943,7 +6943,7 @@ MonoBehaviour:
   <MinX>k__BackingField: -8
   <MaxX>k__BackingField: 8
   <MiddleClamp>k__BackingField: 1.5
-  <FireCooldown>k__BackingField: 1
+  <FireCooldown>k__BackingField: 2.5
 --- !u!1 &1019506296
 GameObject:
   m_ObjectHideFlags: 0
@@ -9116,7 +9116,7 @@ MonoBehaviour:
   <MinX>k__BackingField: -8
   <MaxX>k__BackingField: 8
   <MiddleClamp>k__BackingField: 1.5
-  <FireCooldown>k__BackingField: 1
+  <FireCooldown>k__BackingField: 2.5
 --- !u!1 &1345002865
 GameObject:
   m_ObjectHideFlags: 0

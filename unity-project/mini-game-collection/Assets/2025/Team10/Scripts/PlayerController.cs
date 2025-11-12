@@ -22,7 +22,7 @@ namespace MiniGameCollection.Games2025.Team10
         [field: SerializeField] public float MiddleClamp { get; private set; } = 1.5f; // Middle zone where players cant go (no middle camping)
 
         // Shooting cooldown timer
-        [field: SerializeField] public float FireCooldown { get; private set; } = 1f; // Temporary firing cooldown for testing (will be changed according to bounce back of frisbee feature)
+        [field: SerializeField] public float FireCooldown { get; private set; } = 10f; // Temporary firing cooldown for testing (will be changed according to bounce back of frisbee feature)
         private float fireTimer = 0f; // Tracks time since last frisbee was thrown 
 
         //
@@ -55,10 +55,10 @@ namespace MiniGameCollection.Games2025.Team10
             fireTimer -= Time.deltaTime;
 
             // If the cooldown is done and shoot button is pressed -> shoot the frisbee
-            if (fireTimer < 0f && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
+           if (CanShootFrisbee && fireTimer <= 0f && ArcadeInput.Players[(int)PlayerID].Action1.Pressed)
             {
                 ShootFrisbee();
-                fireTimer = FireCooldown; // Reset the cooldown timer
+                fireTimer = FireCooldown; // Reset cooldown timer
             }
 
         }

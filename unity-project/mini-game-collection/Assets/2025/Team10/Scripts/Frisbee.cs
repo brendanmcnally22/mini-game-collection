@@ -19,8 +19,7 @@ namespace MiniGameCollection.Games2025.Team10
 
         private bool isReturning = false; // If the frisbee is own its way back to the player that threw it
 
-
-        // Called when the frisbee is first thrown
+      
         public void Shoot(FrisbeeOwner owner, Vector2 direction, float speed, ScoreKeeper scoreKeeper, MiniGameManager miniGameManager)
         {
             // Save references
