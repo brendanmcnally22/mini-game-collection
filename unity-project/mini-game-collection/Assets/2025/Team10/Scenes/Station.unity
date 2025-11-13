@@ -3495,10 +3495,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.07864584
+    x: 0.050000004
     y: 0
-    width: 0.30083337
-    height: 0.33425924
+    width: 0.90000004
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -5102,12 +5102,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 986e98081cb3fd545835bb22de2fbaa6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 878571a471297d24e824673e63a345c5, type: 3}
   m_Color: {r: 0.34922743, g: 0.5230239, b: 0.5396226, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.09, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -7736,12 +7736,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 986e98081cb3fd545835bb22de2fbaa6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 878571a471297d24e824673e63a345c5, type: 3}
   m_Color: {r: 0.34922743, g: 0.5230239, b: 0.5396226, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.09, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

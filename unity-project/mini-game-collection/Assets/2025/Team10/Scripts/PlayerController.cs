@@ -143,13 +143,12 @@ namespace MiniGameCollection.Games2025.Team10
             if (collision.gameObject.name == "Hanger")
             {
                 SceneManager.LoadScene("Hanger");
-                Debug.Log("test this is working");
 
-                if (collision.gameObject.name == "Station")
-                {
-                    SceneManager.LoadScene("Station");
+            }
+            if (collision.gameObject.name == "Station")
+            {
+                SceneManager.LoadScene("Station");
 
-                }
             }
         }
     }
