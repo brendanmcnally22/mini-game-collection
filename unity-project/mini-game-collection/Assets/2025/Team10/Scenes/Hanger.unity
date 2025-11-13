@@ -1295,7 +1295,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c7f97754eb2c8fa4a961aa8cb512a795,
+      objectReference: {fileID: 21300000, guid: 427444691afad3f45abe1731d04b154e,
         type: 3}
     - target: {fileID: 2935933690159508828, guid: f0c08f6f5a2eb8b409a571cd83c4f1ca,
         type: 3}
@@ -1774,6 +1774,7 @@ GameObject:
   - component: {fileID: 296155846}
   - component: {fileID: 296155845}
   - component: {fileID: 296155847}
+  - component: {fileID: 296155848}
   m_Layer: 0
   m_Name: buttonYellow (2)
   m_TagString: LeftWall
@@ -1821,7 +1822,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 67
   m_Sprite: {fileID: 21300000, guid: cc792a7a00cdfe748a31fd6508457dce, type: 3}
   m_Color: {r: 1, g: 0.914606, b: 0.17647058, a: 0.050980393}
   m_FlipX: 0
@@ -1869,6 +1870,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &296155848
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296155844}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: aa2e616099cc79d4ebefd797ae3dada6, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &300285500
 GameObject:
   m_ObjectHideFlags: 0
@@ -4212,10 +4228,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.15833335
+    x: 0.050000004
     y: 0
-    width: 0.34833336
-    height: 0.38703704
+    width: 0.90000004
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -5016,6 +5032,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 772a421a033da7b44af4e98bded8cf4c,
         type: 3}
+    - target: {fileID: 2815414771531051531, guid: 1232b4c7619f953428e49356e540c794,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4500197936729670995, guid: 1232b4c7619f953428e49356e540c794,
         type: 3}
       propertyPath: <MinMaxY>k__BackingField
@@ -7538,9 +7559,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdownImage: {fileID: 1395849520}
   numberSprites:
-  - {fileID: 21300000, guid: 82bc1a189f8cd474c84af6d9a3b4ad84, type: 3}
-  - {fileID: 21300000, guid: 8acf604b0a8094445969e949418425d2, type: 3}
-  - {fileID: 21300000, guid: 83653120794a2184f84684c411a0d619, type: 3}
+  - {fileID: 21300000, guid: 2a79bcf19ab430c4a8a446fb8b73807e, type: 3}
+  - {fileID: 21300000, guid: 0d91dca4b3b27d140bf3b9f27bc198c9, type: 3}
+  - {fileID: 21300000, guid: 315b9e74937e73f4ca1201a0ae2ae1e0, type: 3}
   interval: 1
 --- !u!4 &1052167043
 Transform:
@@ -8472,12 +8493,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59195eabdcb13aa4ba32519d099eeae9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a114789eb7afafe4a8eb9faab643389c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.36, y: 3.69}
+  m_Size: {x: 0.35, y: 1.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9177,12 +9198,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59195eabdcb13aa4ba32519d099eeae9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a114789eb7afafe4a8eb9faab643389c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.36, y: 3.69}
+  m_Size: {x: 0.68, y: 0.71}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -10879,7 +10900,7 @@ Animation:
   - {fileID: 7400000, guid: 6ab5d6466b759b0469e8feaaeb2d8169, type: 2}
   - {fileID: 7400000, guid: 4fa16bcbe2f022d468db413f81271f0a, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!61 &1579975429
