@@ -515,7 +515,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c7f97754eb2c8fa4a961aa8cb512a795,
+      objectReference: {fileID: 21300000, guid: 427444691afad3f45abe1731d04b154e,
         type: 3}
     - target: {fileID: 3745821509184164314, guid: f0c08f6f5a2eb8b409a571cd83c4f1ca,
         type: 3}
@@ -893,7 +893,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6b2efd54b4620b4895b8af1ba05f3bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37327771ee51c3940829da6662acb8bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.45490196}
   m_FlipX: 0
   m_FlipY: 0
@@ -2201,10 +2201,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.025641028
-    width: 1
-    height: 0.9495193
+    x: 0.15833335
+    y: 0
+    width: 0.34833336
+    height: 0.38703704
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
