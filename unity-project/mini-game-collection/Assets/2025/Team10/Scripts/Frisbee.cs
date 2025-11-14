@@ -79,8 +79,8 @@ namespace MiniGameCollection.Games2025.Team10
                     else
                     {
                         // If they somehow hit themselves before the bounce, subtract points
-                     
                         ScoreKeeper.AddScore(player.PlayerID, PointPenalty);
+
                         DestroyFrisbee();
                         return;
                     }
@@ -89,7 +89,17 @@ namespace MiniGameCollection.Games2025.Team10
                 {
                     // If the frisbee hits the other player
                     // Subtract points from whoever was hit (even if you hit urself)
-                    ScoreKeeper.AddScore(player.PlayerID, PointPenalty);
+                    // ScoreKeeper.AddScore(player.PlayerID, PointPenalty);
+
+                    // Figures out which player threw the frisbee (the match winner)
+                    PlayerID ownerID = OwnerToPlayerID(Owner);
+
+                    // If the owner is Player1 than that means Red wins, otherwise Blue wins!
+                    WinnerInfo.WinnerIsRed = (ownerID == PlayerID.Player2);
+
+                    // Go to the WinScreen scene
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("WinScreen");
+
                     DestroyFrisbee();
                     return;
                 }
